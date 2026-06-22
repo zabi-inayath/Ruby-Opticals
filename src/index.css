@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-navy-50 text-slate-800 font-sans antialiased selection:bg-ruby-200 selection:text-ruby-900;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  /* Premium Glass Cards */
+  .glass-card-light {
+    @apply bg-white/70 backdrop-blur-xl border border-white/30 shadow-glass-light;
+  }
+  .glass-card-dark {
+    @apply bg-navy-950/75 backdrop-blur-xl border border-white/5 shadow-glass-dark;
+  }
+
+  /* Buttons */
+  .btn-premium-primary {
+    @apply relative overflow-hidden inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-ruby-700 to-ruby-800 hover:from-ruby-600 hover:to-ruby-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-premium-glow hover:-translate-y-0.5 active:translate-y-0;
+  }
+  
+  .btn-premium-outline {
+    @apply inline-flex items-center justify-center gap-2.5 border-2 border-ruby-700 text-ruby-700 hover:bg-ruby-700 hover:text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-premium-glow;
+  }
+  
+  .btn-premium-dark-outline {
+    @apply inline-flex items-center justify-center gap-2.5 border border-white/20 text-white hover:bg-white/10 hover:border-white/40 font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 backdrop-blur-sm;
+  }
+
+  .btn-premium-gold {
+    @apply inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold px-7 py-3.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-gold-glow hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  /* Section Title */
+  .section-title-premium {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy-900 leading-tight tracking-tight;
+  }
+  
+  .section-subtitle-premium {
+    @apply text-ruby-700 font-bold text-xs tracking-[0.2em] uppercase mb-4 inline-block relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-8 after:h-[2px] after:bg-ruby-700;
+  }
+
+  /* Image Container hover effect */
+  .premium-img-wrapper {
+    @apply relative overflow-hidden rounded-3xl border border-white/10 shadow-lg after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-navy-950/40 after:to-transparent after:opacity-60;
+  }
+}
+
+/* Custom Scrollbar for modern look */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-navy-50;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full border-2 border-navy-50 hover:bg-slate-400 transition-colors;
+}
+
+/* Horizontal auto-marquee text effect (fallback if wanted) */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-content {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Timeline Custom Styles */
+.timeline-dot {
+  @apply w-4 h-4 rounded-full border-4 border-navy-50 bg-ruby-600 shadow-md transition-all duration-300;
+}
+.timeline-item:hover .timeline-dot {
+  @apply scale-150 bg-gold-500 ring-4 ring-ruby-100;
+}
+
