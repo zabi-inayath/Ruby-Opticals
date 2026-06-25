@@ -21,38 +21,20 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white/80 backdrop-blur-md shadow-glass-light py-3 border-b border-slate-100"
-          : "bg-transparent py-5 border-b border-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className={`fixed w-full z-50 transition-all duration-500 px-4 sm:px-8 ${scrolled ? "top-4" : "top-0"}`}>
+      <nav className={`mx-auto w-full transition-all duration-500 ${
+        scrolled 
+          ? "max-w-6xl bg-white/95 backdrop-blur-md rounded-full shadow-[0_10px_30px_rgba(44,34,32,0.08)] py-2 px-6 sm:px-8 border border-white/60" 
+          : "max-w-7xl bg-transparent border-b border-transparent py-6"
+      }`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
-            <div className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 ${
-              scrolled ? "bg-ruby-700 shadow-md rotate-3 group-hover:rotate-12" : "bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/20"
-            }`}>
-              <svg viewBox="0 0 32 32" className={`w-6 h-6 transition-colors duration-300 ${scrolled ? "fill-white" : "fill-ruby-400"}`} aria-hidden="true">
-                <ellipse cx="16" cy="20" rx="12" ry="8" opacity="0.3"/>
-                <ellipse cx="16" cy="16" rx="10" ry="7"/>
-                <circle cx="16" cy="13" r="4" opacity="0.9"/>
-              </svg>
-            </div>
-            <div className="leading-tight">
-              <span className={`font-display font-extrabold text-xl tracking-wide transition-colors ${
-                scrolled ? "text-navy-900" : "text-white"
-              }`}>
-                Ruby <span className="text-ruby-600">Opticals</span>
-              </span>
-              <p className={`text-[9px] font-bold tracking-[0.25em] uppercase transition-colors ${
-                scrolled ? "text-slate-500" : "text-ruby-200"
-              }`}>
-                & Contact Lens Clinic
-              </p>
-            </div>
+          <a href="#home" className="flex items-center group">
+            <img 
+              src="/websitelogo.png" 
+              alt="Ruby Opticals Logo" 
+              className="w-36 h-auto object-contain rounded-xl transition-transform duration-300 shadow-md" 
+            />
           </a>
 
           {/* Desktop Links */}
@@ -86,11 +68,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className={`md:hidden p-2 rounded-xl transition-all duration-300 ${
-              scrolled
-                ? "text-navy-900 hover:bg-slate-100"
-                : "text-white hover:bg-white/10"
-            }`}
+            className={`md:hidden p-2 rounded-xl transition-all duration-300 text-ruby-600 hover:bg-ruby-50`}
             aria-label="Toggle menu"
           >
             {open ? (
@@ -104,13 +82,13 @@ export default function Navbar() {
             )}
           </button>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile menu */}
-      <div className={`md:hidden fixed inset-x-0 top-16 bg-white/95 backdrop-blur-xl border-t border-slate-100 shadow-xl transition-all duration-300 ease-in-out ${
-        open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+      <div className={`md:hidden -z-10 fixed inset-x-0 top-0 pt-28 pb-8 bg-white/95 backdrop-blur-xl shadow-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8 pointer-events-none"
       }`}>
-        <div className="px-4 py-6 space-y-2">
+        <div className="px-4 space-y-2">
           {navLinks.map((l) => (
             <a
               key={l.href}
@@ -132,7 +110,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }
 

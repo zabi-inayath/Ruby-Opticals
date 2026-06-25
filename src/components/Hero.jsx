@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-32"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-12"
     >
       {/* Background gradient & ambient lighting */}
       <div className="absolute inset-0 bg-[#040712]" />
