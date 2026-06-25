@@ -19,6 +19,7 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  
 
   return (
     <div className={`fixed w-full z-50 transition-all duration-500 px-4 sm:px-8 ${scrolled ? "top-4" : "top-0"}`}>
