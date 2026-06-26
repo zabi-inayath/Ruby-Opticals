@@ -1,4 +1,4 @@
-import heroImage from "../assets/hero_opticals.png";
+import heroImage from "/unnamed (1).webp";
 
 export default function Hero() {
   return (
@@ -112,18 +112,12 @@ export default function Hero() {
                 <span className="text-[10px] font-bold text-white uppercase tracking-wider">Premium Collections Available</span>
               </div>
               
-              <div className="absolute bottom-6 right-6 z-20 glass-card-dark rounded-2xl px-4 py-3 border border-white/10 shadow-lg flex items-center gap-3">
-                <div className="text-right">
-                  <p className="text-[10px] text-white/50 leading-none">Optical Lenses by</p>
-                  <p className="text-xs font-bold text-white">ZEISS, Essilor, Nikon</p>
-                </div>
-              </div>
 
               {/* Eyeglasses Image */}
               <img
                 src={heroImage}
                 alt="Premium designer eyewear"
-                className="w-full max-w-[400px] h-auto object-cover rounded-[24px] shadow-inner"
+                className="w-full max-w-[700px] h-auto object-cover rounded-[24px] shadow-inner"
               />
             </div>
             

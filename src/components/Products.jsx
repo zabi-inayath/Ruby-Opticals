@@ -5,8 +5,8 @@ const categories = [
     id: "frames",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 13.5a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm10 0a4 4 0 1 0 8 0 4 4 0 0 0-8 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 12.5h3m-11 0v-2.5a2 2 0 0 1 2-2h2m14 4.5v-2.5a2 2 0 0 0-2-2h-2" />
       </svg>
     ),
     title: "Eyeglass Frames",
@@ -18,8 +18,9 @@ const categories = [
     id: "sunglasses",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="5" strokeWidth={1.5}/>
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.5 14C2.5 16.5 4 18 6.5 18S11 15.5 11 13V11H2.5v3Z" fill="currentColor" fillOpacity="0.2"/>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21.5 14c0 2.5-1.5 4-4.5 4S13 15.5 13 13v-2h8.5v3Z" fill="currentColor" fillOpacity="0.2"/>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 12h2m-10.5-1v-1a2 2 0 0 1 2-2h2m15 3v-1a2 2 0 0 0-2-2h-2" />
       </svg>
     ),
     title: "Sunglasses",
@@ -31,8 +32,10 @@ const categories = [
     id: "contact-lenses",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z"/>
-        <circle cx="12" cy="12" r="3" strokeWidth={1.5}/>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.5 10.5C5.5 17 18.5 17 20.5 10.5" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.5 10.5C8 12.5 16 12.5 20.5 10.5" fill="currentColor" fillOpacity="0.1" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.5 14L9 15M13.5 14l1.5 1" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 5v2m0 12v2" />
       </svg>
     ),
     title: "Contact Lenses",
@@ -44,8 +47,10 @@ const categories = [
     id: "computer-glasses",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <rect x="2" y="6" width="20" height="12" rx="2" strokeWidth={1.5}/>
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+        <rect x="2" y="4" width="20" height="13" rx="2" strokeWidth={1.5}/>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 17v3m8-3v3M4 20h16" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 11.5a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm6 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 11h2m-6 0v-.5a1 1 0 0 1 1-1h.5m8.5 1.5v-.5a1 1 0 0 0-1-1H15" />
       </svg>
     ),
     title: "Computer Glasses",
@@ -57,7 +62,9 @@ const categories = [
     id: "reading-glasses",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v15H6.5a2.5 2.5 0 0 0 0 5H20" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 11.5a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm6 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 11h2m-6 0v-.5a1 1 0 0 1 1-1h.5m8.5 1.5v-.5a1 1 0 0 0-1-1H14" />
       </svg>
     ),
     title: "Reading Glasses",
@@ -69,7 +76,9 @@ const categories = [
     id: "kids-glasses",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 14a3.5 3.5 0 1 0 7 0 3.5 3.5 0 0 0-7 0zm11 0a3.5 3.5 0 1 0 7 0 3.5 3.5 0 0 0-7 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 13.5h4m-11 0v-2a2 2 0 0 1 2-2h1.5m13.5 4v-2a2 2 0 0 0-2-2H16" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18 4l1 2 2 .5-1.5 1.5.5 2-2-1-2 1 .5-2L15 6.5 17 6l1-2z" fill="currentColor"/>
       </svg>
     ),
     title: "Kids Glasses",

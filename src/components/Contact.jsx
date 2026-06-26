@@ -113,132 +113,18 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* WhatsApp CTA */}
-            <a
-              href="https://wa.me/918903684848"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-3xl p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 group"
-            >
-              <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/10">
-                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-              </div>
-              <div>
-                <p className="font-bold text-sm leading-tight">Chat on WhatsApp</p>
-                <p className="text-emerald-100 text-xs mt-0.5 leading-none">Quick appointments & general inquiries</p>
-              </div>
-              <svg className="w-4 h-4 ml-auto transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
+            
           </div>
 
           {/* Right Block – Booking Form & Map (7 columns on desktop) */}
           <div className="lg:col-span-7 space-y-6">
             
-            {/* Form */}
-            <div className="bg-white rounded-3xl border border-slate-100 shadow-glass-light p-8">
-              <h3 className="font-display font-extrabold text-navy-900 text-xl mb-1">Book Eye Test / Inquiry</h3>
-              <p className="text-slate-500 text-sm mb-8 font-medium">Fill in your information and we will verify via WhatsApp instantly.</p>
-
-              {sent && (
-                <div className="mb-6 bg-emerald-50 border border-emerald-150 text-emerald-900 text-sm font-semibold rounded-2xl px-5 py-4 flex items-center gap-3.5 shadow-sm">
-                  <svg className="w-5 h-5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"/>
-                  </svg>
-                  Your details have been compiled and sent via WhatsApp successfully!
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Full Name *</label>
-                    <input
-                      required
-                      name="name"
-                      value={form.name}
-                      onChange={handleChange}
-                      placeholder="e.g. John Doe"
-                      className="w-full border border-slate-200/80 bg-slate-50 rounded-2xl px-5 py-4 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-ruby-500 focus:ring-2 focus:ring-ruby-100 transition-all duration-300"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Phone Number *</label>
-                    <input
-                      required
-                      name="phone"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="e.g. +91 XXXXX XXXXX"
-                      className="w-full border border-slate-200/80 bg-slate-50 rounded-2xl px-5 py-4 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-ruby-500 focus:ring-2 focus:ring-ruby-100 transition-all duration-300"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Email Address (optional)</label>
-                  <input
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="e.g. mail@example.com"
-                    className="w-full border border-slate-200/80 bg-slate-50 rounded-2xl px-5 py-4 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-ruby-500 focus:ring-2 focus:ring-ruby-100 transition-all duration-300"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Service Required *</label>
-                  <select
-                    required
-                    name="service"
-                    value={form.service}
-                    onChange={handleChange}
-                    className="w-full border border-slate-200/80 bg-slate-50 rounded-2xl px-5 py-4 text-sm text-slate-800 focus:outline-none focus:bg-white focus:border-ruby-500 focus:ring-2 focus:ring-ruby-100 transition-all duration-300"
-                  >
-                    <option value="">Select a clinical service...</option>
-                    {services.map((s) => (
-                      <option key={s} value={s}>{s}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Message (optional)</label>
-                  <textarea
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    rows={3}
-                    placeholder="Any specific requests or power info..."
-                    className="w-full border border-slate-200/80 bg-slate-50 rounded-2xl px-5 py-4 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-ruby-500 focus:ring-2 focus:ring-ruby-100 transition-all duration-300 resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-ruby-700 hover:bg-ruby-800 text-white font-bold tracking-wider uppercase py-4.5 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2.5 text-sm shadow-md hover:shadow-premium-glow hover:-translate-y-0.5 active:translate-y-0"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                  </svg>
-                  Confirm Appointment via WhatsApp
-                </button>
-
-                <p className="text-slate-400 text-center text-xs font-semibold leading-relaxed">
-                  Your inputs will be safely structured and sent to Mr. Khalif Ahamed immediately.
-                </p>
-              </form>
-            </div>
-
+            
             {/* Custom styled map frame */}
-            <div className="rounded-3xl overflow-hidden border border-slate-200/80 shadow-md h-[250px] relative">
+            <div className="rounded-3xl overflow-hidden border border-slate-200/80 shadow-md h-[550px] relative">
               <iframe
                 title="Ruby Opticals Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.62!2d77.9771!3d10.3595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9da9eb7dcb240115!2sRuby+Opticals!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps?q=Ruby+Optical+Dindigul&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

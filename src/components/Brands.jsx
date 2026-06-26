@@ -8,6 +8,28 @@ const lensBrands = ["ZEISS", "Essilor", "Nikon", "Hoya", "Nova"];
 
 const contactBrands = ["Bausch + Lomb", "Alcon", "Johnson & Johnson", "CooperVision"];
 
+const brandLogos = {
+  "Ray-Ban": "https://cdn.worldvectorlogo.com/logos/ray-ban.svg",
+  "Oakley": "https://cdn.worldvectorlogo.com/logos/oakley-1.svg",
+  "Boss": "https://cdn.worldvectorlogo.com/logos/hugo-boss.svg",
+  "Silhouette": "https://cdn.worldvectorlogo.com/logos/silhouette-1.svg",
+  "MontBlanc": "https://cdn.worldvectorlogo.com/logos/montblanc-1.svg",
+  "Carrera": "https://cdn.worldvectorlogo.com/logos/carrera.svg",
+  "Tommy Hilfiger": "https://cdn.worldvectorlogo.com/logos/tommy-hilfiger-3.svg",
+  "Calvin Klein": "https://cdn.worldvectorlogo.com/logos/calvin-klein-1.svg",
+  "Vogue Eyewear": "https://cdn.worldvectorlogo.com/logos/vogue-1.svg",
+  "Fossil": "https://cdn.worldvectorlogo.com/logos/fossil.svg",
+  "Puma": "https://cdn.worldvectorlogo.com/logos/puma-logo.svg",
+  "Lacoste": "https://cdn.worldvectorlogo.com/logos/lacoste-logo.svg",
+  "Essilor": "https://cdn.worldvectorlogo.com/logos/essilor.svg",
+  "Nikon": "https://cdn.worldvectorlogo.com/logos/nikon.svg",
+  "Hoya": "https://cdn.worldvectorlogo.com/logos/hoya.svg",
+  "Bausch + Lomb": "https://cdn.worldvectorlogo.com/logos/bausch-lomb.svg",
+  "Alcon": "https://cdn.worldvectorlogo.com/logos/alcon.svg",
+  "Johnson & Johnson": "https://cdn.worldvectorlogo.com/logos/johnson-johnson.svg",
+  "CooperVision": "https://cdn.worldvectorlogo.com/logos/coopervision.svg",
+};
+
 export default function Brands() {
   return (
     <section id="brands" className="py-24 md:py-32 bg-slate-50 relative">
@@ -38,9 +60,14 @@ export default function Brands() {
             {frameBrands.map((b) => (
               <div
                 key={b}
-                className="bg-white border border-slate-200/80 text-navy-950 font-bold text-sm tracking-wide uppercase px-6 py-4 rounded-2xl shadow-sm hover:border-ruby-300 hover:shadow-premium-glow hover:-translate-y-0.5 transition-all duration-300 text-center flex items-center justify-center min-h-[64px]"
+                className="bg-white border border-slate-200/80 px-4 py-6 rounded-2xl shadow-sm hover:border-ruby-300 hover:shadow-premium-glow hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center min-h-[106px]"
+                title={b}
               >
-                {b}
+                {brandLogos[b] ? (
+                  <img src={brandLogos[b]} alt={b} className="h-8 sm:h-10 md:h-12 w-auto max-w-[160px] md:max-w-[200px] object-contain opacity-80 hover:opacity-100 transition-opacity mix-blend-multiply" />
+                ) : (
+                  <span className="text-navy-950 font-bold text-sm tracking-wide uppercase text-center">{b}</span>
+                )}
               </div>
             ))}
           </div>
@@ -64,9 +91,14 @@ export default function Brands() {
                 {lensBrands.map((b) => (
                   <span
                     key={b}
-                    className="bg-slate-50 text-slate-800 font-bold text-xs tracking-wider uppercase px-4 py-2.5 rounded-xl border border-slate-100 transition-colors group-hover:border-ruby-200"
+                    className="bg-slate-50 border border-slate-100 px-5 py-3 rounded-xl transition-colors group-hover:border-ruby-200 flex items-center justify-center min-w-[90px] min-h-[56px]"
+                    title={b}
                   >
-                    {b}
+                    {brandLogos[b] ? (
+                      <img src={brandLogos[b]} alt={b} className="h-6 sm:h-8 max-w-[100px] object-contain opacity-75 hover:opacity-100 transition-opacity mix-blend-multiply" />
+                    ) : (
+                      <span className="text-slate-800 font-bold text-xs tracking-wider uppercase text-center">{b}</span>
+                    )}
                   </span>
                 ))}
               </div>
@@ -94,9 +126,14 @@ export default function Brands() {
                 {contactBrands.map((b) => (
                   <span
                     key={b}
-                    className="bg-slate-50 text-slate-800 font-bold text-xs tracking-wider uppercase px-4 py-2.5 rounded-xl border border-slate-100 transition-colors group-hover:border-blue-200"
+                    className="bg-slate-50 border border-slate-100 px-5 py-3 rounded-xl transition-colors group-hover:border-blue-200 flex items-center justify-center min-w-[90px] min-h-[56px]"
+                    title={b}
                   >
-                    {b}
+                    {brandLogos[b] ? (
+                      <img src={brandLogos[b]} alt={b} className="h-6 sm:h-8 max-w-[100px] object-contain opacity-75 hover:opacity-100 transition-opacity mix-blend-multiply" />
+                    ) : (
+                      <span className="text-slate-800 font-bold text-xs tracking-wider uppercase text-center">{b}</span>
+                    )}
                   </span>
                 ))}
               </div>
