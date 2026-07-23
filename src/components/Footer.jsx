@@ -111,13 +111,19 @@ export default function Footer() {
 
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <p className="text-slate-500 text-xs font-semibold">
             © {new Date().getFullYear()} Ruby Opticals & Contact Lens Clinic. All rights reserved.
           </p>
-          <p className="text-slate-500 text-xs font-semibold tracking-wider uppercase">
-            Established 1991 · Dindigul, Tamil Nadu
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-slate-500 text-xs font-semibold">
+            <p className="tracking-wider uppercase">
+              Established 1991 · Dindigul, Tamil Nadu
+            </p>
+            <span className="hidden sm:inline text-white/20">|</span>
+            <p>
+              Developed by <a href="https://ilahtech.in" target="_blank" rel="noopener noreferrer" className="text-ruby-400 hover:text-ruby-300 hover:underline transition-colors font-bold">Ilah Technologies</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

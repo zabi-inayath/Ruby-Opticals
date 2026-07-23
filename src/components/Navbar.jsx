@@ -32,7 +32,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#home" className="flex items-center group">
             <img 
-              src="/websitelogo.png" 
+              src="/websitelogo1.png" 
               alt="Ruby Opticals Logo" 
               className="w-36 h-auto object-contain rounded-xl transition-transform duration-300 shadow-md" 
             />
